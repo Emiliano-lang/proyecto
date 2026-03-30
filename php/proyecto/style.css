@@ -1,0 +1,267 @@
+/* Fuente general */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    background-color: #f0ede8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Titulo */
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 28px;
+}
+
+/* Dos columnas para nombre y apellido */
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Cada campo del formulario */
+.campo {
+    margin-bottom: 16px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b6b6b;
+    margin-bottom: 6px;
+}
+
+/* Inputs de texto */
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: 15px;
+    color: #1a1a1a;
+    background: #f9f8f6;
+    border: 1.5px solid #e8e5e0;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    border-color: #1a1a1a;
+    background: #ffffff;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+/* Boton de enviar */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Boton flotante ver consultas */
+.boton-consultas {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boton-consultas:hover {
+    background-color: #333;
+}
+
+/* Boton flotante volver */
+.boton-volver {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boton-volver:hover {
+    background-color: #333;
+}
+
+/* Caja de mensaje de resultado (insertar.php) */
+.mensaje {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Mensajes de exito y error */
+.exito {
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #e53e3e;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.mensaje p {
+    font-size: 14px;
+    color: #9a9a9a;
+    margin-bottom: 20px;
+}
+
+/* Link volver del mensaje */
+.mensaje a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mensaje a:hover {
+    background: #333;
+}
+
+/* Bloques de cada consulta */
+.consulta-bloque {
+    border: 1.5px solid #f0ede8;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+}
+
+/* Etiqueta "Consulta 1" */
+.consulta-etiqueta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 4px;
+}
+
+/* Titulo de cada consulta */
+.consulta-titulo {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+}
+
+/* Tabla de resultados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9a9a9a;
+    padding: 6px 10px;
+    border-bottom: 1.5px solid #f0ede8;
+}
+
+table td {
+    padding: 9px 10px;
+    color: #1a1a1a;
+    border-bottom: 1px solid #f9f8f6;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover td {
+    background: #faf9f7;
+}
+
+/* Caja para mostrar un dato grande como el DNI */
+.dato-grande {
+    background: #f9f8f6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Texto cuando no hay resultados */
+.sin-datos {
+    font-size: 13px;
+    color: #bbb;
+    padding: 8px 0;
+}
